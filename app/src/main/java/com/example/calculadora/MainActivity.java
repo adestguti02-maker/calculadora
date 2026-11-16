@@ -83,3 +83,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case "x":
                 resultado = primerNumero * segundoNumero;
                 break;
+            case "/":
+                if (segundoNumero == 0) {
+                    Toast.makeText(this, "No se puede dividir entre cero",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                resultado = primerNumero / segundoNumero;
+                break;
+        }
