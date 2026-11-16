@@ -80,4 +80,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case "-":
                 resultado = primerNumero - segundoNumero;
                 break;
-}
+            case "x":
+                resultado = primerNumero * segundoNumero;
+                break;
