@@ -87,8 +87,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (segundoNumero == 0) {
                     Toast.makeText(this, "No se puede dividir entre cero",
                             Toast.LENGTH_SHORT).show();
+                    limpiar();
                     return;
                 }
                 resultado = primerNumero / segundoNumero;
                 break;
         }
+
+        if (resultado == (long) resultado) {
+            tvPantalla.setText(String.valueOf((long) resultado));
+        } else {
+            tvPantalla.setText(String.valueOf(resultado));
+        }
+
+        operacion = "";
+        nuevoNumero = true;
+    }
+
+    private void limpiar() {
+        tvPantalla.setText("0");
+        primerNumero = 0;
+        operacion = "";
+        nuevoNumero = true;
+    }
+}
